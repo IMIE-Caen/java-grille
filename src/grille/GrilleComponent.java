@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bn;
+package grille;
 
 import java.awt.Graphics;
 import javax.swing.JComponent;

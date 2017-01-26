@@ -3,21 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bn;
+package grille;
 
 /**
  *
  * @author clement
  */
-public class BN {
+public class BatailleNavale {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        new Window();
-             
+        
+        
+        Grille g = new Grille(6);
+        new Fenetre(g);
+        new FenetrePlacementBateau(g);
+
     }
     
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bn;
+package grille;
 
 import java.awt.BorderLayout;
 import java.util.Scanner;
@@ -14,20 +14,22 @@ import javax.swing.JFrame;
  *
  * @author clement
  */
-public class Window extends JFrame {
-    
-    public Window(){
-        this.setTitle("Ma fenêtre Java");
+public class Fenetre extends JFrame {
+    Grille g ;
+    public Fenetre(Grille g){
+        this.g = g;
+        setTitle("Ma fenêtre Java");
         
 
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        System.out.print("Taille de grille : ");
-        int size = new Scanner(System.in).nextInt();    
+        int size = g.getSize();
         
-        GrilleComponent grilleComp = new GrilleComponent(new Grille(size));
+        GrilleComponent grilleComp = new GrilleComponent(g);
         
         this.setSize(size * 50, size * 50);
+        
+        
         
         this.getContentPane().add(grilleComp);
         this.getContentPane().add(new JButton("Nouveau bateau"), BorderLayout.SOUTH);

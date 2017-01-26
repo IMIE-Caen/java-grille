@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bn;
+package grille;
+
+import java.util.ArrayList;
 
 /**
  *
@@ -11,6 +13,7 @@ package bn;
  */
 public class Grille {
     private int size;
+    private ArrayList<Coordonnees> tab = new ArrayList<>();
 
     Grille(int size) {
         this.size = size;
@@ -18,4 +21,13 @@ public class Grille {
     public int getSize(){
         return size;
     }
+    public void addBateau(Coordonnees coords){
+        tab.add(coords);
+    }
+
+    @Override
+    public String toString() {
+        return tab.toString();
+    }
+    
 }
